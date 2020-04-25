@@ -42,10 +42,18 @@ i.textContent = z.value;
 }
 
 let mylist = [];
-
+var mytimer = 0;
 function myFunction() {
-
-
+   var removeThis = document.querySelector('table');
+  if (mytimer > 0) {
+    
+   
+    
+  removeThis.parentNode.remove(removeThis);
+  } else {
+    mytimer = 0;
+  }
+ 
   let myContainer = document.createElement('div');
   
   myContainer.className = "myApp";
@@ -100,9 +108,13 @@ alert(mylist[1].className);
     n[i].style.background = myCells.value;
   }
 
-document.appendChild(myContainer);
+
+
+document.body.appendChild(myContainer);
 var mytable = document.querySelectorAll('table');
+alert(mylist);
 mytable.id  = "mine";
+
 }
 
 
