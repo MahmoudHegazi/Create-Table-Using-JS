@@ -17,7 +17,7 @@ I really Like this app if you didn't like it so you are noob can't understand it
 <img src="last.PNG">
 
 ## version 7:
-<img src="lasttt.PNG">
+<img src="newVerison.PNG">
 
 
 On My server:
