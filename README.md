@@ -14,10 +14,11 @@ I really Like this app if you didn't like it so you are noob can't understand it
 <img src="last_version.PNG">
 
 ## version 6:
-<img src="last.PNG">
+<img src="newVerison.PNG">
+
 
 ## version 7:
-<img src="newVerison.PNG">
+<img src="last.PNG">
 
 
 On My server:
