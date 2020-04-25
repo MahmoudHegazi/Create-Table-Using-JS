@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+.myApp {
+  border: 2px solid black;
+
+}
+
+</style>
+<body>
+
+
+<div class="options">
+
+<label>Number Of Hight</label>
+<span id="first_range"></span> <input type="range" id="my_first_range" onmousemove="change()" min="1" max="100" value="1">
+
+<br /><br />
+<label>Number Of Width</label>
+<span id="second_range"></span> <input type="range" id="my_second_range" onmousemove="change()" min="1" max="100" value="1">
+<button onclick="myFunction()">Click</button>
+</div>
+
+<br /><br />  
+<script>
+/* function to show value of range input */
+function change() {
+var x = document.getElementById("my_first_range");
+var y = document.getElementById("first_range");
+var z =  document.getElementById("my_second_range");
+var i = document.getElementById("second_range");
+
+y.textContent = x.value;
+i.textContent = z.value;
+}
+
+
+function myFunction() {
+  let myContainer = document.createElement('div');
+  myContainer.className = "myApp";
+  document.body.appendChild(myContainer);
+  
+var x = document.createElement('table');
+var y = document.createElement('tr');
+
+
+var demon = document.getElementById("my_first_range");
+var demon1 = document.getElementById("my_second_range");
+
+x.appendChild(y);
+myContainer.appendChild(x);
+
+for (var side = 0; side < demon.value; side++) {
+
+for (var i = 0; i < demon1.value; i++) {
+
+ var z = document.createElement('tr');
+
+x.appendChild(z);
+console.log('tr value = ' + i);
+
+};
+
+for (var i = 0; i < demon1.value; i++) {
+
+ txt = document.createElement('td');
+ txt.style.background = "black";
+ txt.style.width = "10px";
+ txt.style.height = "10px";
+z.appendChild(txt);
+y.appendChild(z);
+var index = i; 
+console.log('txt value = ' + i);
+};
+
+}
+myContainer.style.width = (demon1.value * 10) + "px";
+myContainer.style.height = (demon.value * 12.5) + "px";
+}
+y.appendChild(z);
+
+
+
+</script>
+
+
+
+</body>
+</html>
