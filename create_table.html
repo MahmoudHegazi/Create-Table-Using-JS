@@ -18,11 +18,18 @@
 <br /><br />
 <label>Number Of Width</label>
 <span id="second_range"></span> <input type="range" id="my_second_range" onmousemove="change()" min="1" max="100" value="1">
+<br />
+<label>Cells background</label>
+<input id="mycells" type="color">
 <button onclick="myFunction()">Click</button>
 </div>
 
 <br /><br />  
 <script>
+let myCells = document.getElementById('mycells');
+var mytimer = 0;
+
+let myTables = [];
 /* function to show value of range input */
 function change() {
 var x = document.getElementById("my_first_range");
@@ -34,13 +41,19 @@ y.textContent = x.value;
 i.textContent = z.value;
 }
 
+let mylist = [];
 
 function myFunction() {
+
+
   let myContainer = document.createElement('div');
+  
   myContainer.className = "myApp";
   document.body.appendChild(myContainer);
   
 var x = document.createElement('table');
+
+mytimer += 1;
 var y = document.createElement('tr');
 
 
@@ -64,11 +77,14 @@ console.log('tr value = ' + i);
 for (var i = 0; i < demon1.value; i++) {
 
  txt = document.createElement('td');
- txt.style.background = "black";
+
  txt.style.width = "10px";
  txt.style.height = "10px";
+
 z.appendChild(txt);
 y.appendChild(z);
+txt.className = "my_td";
+mylist.push(txt);
 var index = i; 
 console.log('txt value = ' + i);
 };
@@ -76,8 +92,25 @@ console.log('txt value = ' + i);
 }
 myContainer.style.width = (demon1.value * 10) + "px";
 myContainer.style.height = (demon.value * 12.5) + "px";
+alert(mylist[1].className);
+
+
+  var n = document.querySelectorAll(".my_td");
+  for (i = 0; i < n.length; i++) {
+    n[i].style.background = myCells.value;
+  }
+
+document.appendChild(myContainer);
+var mytable = document.querySelectorAll('table');
+mytable.id  = "mine";
 }
-y.appendChild(z);
+
+
+
+
+
+
+
 
 
 
